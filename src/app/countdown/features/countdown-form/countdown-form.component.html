@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+  <section>
+    <label>Start date</label>
+    <app-time-picker formControlName="start" />
+  </section>
+  <section>
+    <label>Duration</label>
+    <app-time-picker formControlName="duration" />
+  </section>
+  <section class="actions">
+    <button mat-flat-button color="primary" (click)="submit()">Start</button>
+  </section>
+</form>

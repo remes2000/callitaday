@@ -1,0 +1,10 @@
+<div class="container">
+  <mat-form-field>
+    <mat-label>Hours</mat-label>
+    <input matInput placeholder="HH" type="number" [ngModel]="hours" (ngModelChange)="change({ hours: $event })" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Minutes</mat-label>
+    <input matInput placeholder="mm" type="number" [ngModel]="minutes" (ngModelChange)="change({ minutes: $event })"/>
+  </mat-form-field>
+</div>
