@@ -1,3 +1,7 @@
 <section class="countdown">
-  <app-countdown-form (submit)="persist($event)" />
+  @if (mode() === 'form') {
+    <app-countdown-form (start)="startCounter($event)" />
+  } @else {
+    <app-countdown-counter />
+  }
 </section>

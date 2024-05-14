@@ -14,15 +14,15 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CountdownFormComponent {
-  @Output('submit') onSubmit = new EventEmitter<CountdownFormValue>();
+  @Output() start = new EventEmitter<CountdownFormValue>();
   readonly form = new FormGroup({
-    start: new FormControl<Time>(null),
-    duration: new FormControl<Time>(null),
+    start: new FormControl<Time>({ hours: new Date().getHours(), minutes: new Date().getMinutes() }),
+    duration: new FormControl<Time>({ hours: 8, minutes: 0 }),
   });
 
   submit() {
     if (this.form.valid) {
-      this.onSubmit.emit(this.form.getRawValue());
+      this.start.emit(this.form.getRawValue());
     }
   }
 }
