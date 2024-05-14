@@ -67,12 +67,12 @@ License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/animations
+Package: @angular/core
 License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/core
+Package: @angular/animations
 License: "MIT"
 
 
