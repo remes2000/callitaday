@@ -2,13 +2,14 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, inject }
 import { CountdownService } from '../../countdown.service';
 import { interval } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { TimeFormatterPipe } from './time-formatter.pipe';
 
 const REFRESH_INTERVAL_IN_MS = 1_000;
 
 @Component({
   selector: 'app-countdown-counter',
   standalone: true,
-  imports: [],
+  imports: [TimeFormatterPipe],
   templateUrl: './countdown-counter.component.html',
   styleUrl: './countdown-counter.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
